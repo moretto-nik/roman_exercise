@@ -29,3 +29,12 @@ class Roman
 		return Numero.new(self.to_int + roman.to_int).to_roman
 	end
 end
+
+ARGF.each do |line|
+	line.chomp!
+	if line.to_i == 0
+		puts Roman.new(line).to_int()
+	else
+	  puts Numero.new(line.to_i).to_roman()
+	end
+end
